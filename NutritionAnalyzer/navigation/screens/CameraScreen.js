@@ -60,7 +60,7 @@ export default function CameraScreen(navigation) {
   
     return (
       <View style={styles.container}>
-        <Camera style={styles.camera} type={type}>
+        <Camera ref={cameraRef} style={styles.camera} type={type}>
           <View style={styles.buttonContainer}>
             <TouchableOpacity style={styles.button} onPress={takePic}>
               <Text style={styles.text}>Take Picture</Text>
@@ -101,5 +101,9 @@ export default function CameraScreen(navigation) {
       fontWeight: 'bold',
       color: 'white',
     },
+    preview: {
+      alignSelf: 'stretch',
+      flex: 1
+    }
   });
   

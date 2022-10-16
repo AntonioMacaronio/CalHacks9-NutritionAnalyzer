@@ -62,7 +62,7 @@ export default function CameraScreen(navigation) {
       <View style={styles.container}>
         <Camera style={styles.camera} type={type}>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.button} onPress={takePic()}>
+            <TouchableOpacity style={styles.button} onPress={takePic}>
               <Text style={styles.text}>Take Picture</Text>
             </TouchableOpacity>
             <StatusBar style="auto" />

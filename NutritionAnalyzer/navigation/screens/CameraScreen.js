@@ -53,6 +53,7 @@ export default function CameraScreen(navigation) {
         <SafeAreaView style = {styles.container}>
           <Image style={styles.preview} source={{ uri: "data:image/jpg;base64," + photo.base64 }} />
           <Button title="Share" onPress={sharePic} />
+          <Button title="Analyze" onPress={analyzePic} />
           <Button title="Discard" onPress={() => setPhoto(undefined)} />
         </SafeAreaView>
       );

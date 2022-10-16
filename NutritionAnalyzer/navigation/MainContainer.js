@@ -33,19 +33,21 @@ export default function MainContainer() {
 
                         return <Ionicons name={iconName} size={size} color={color}/>
                     },
+                    tabBarActiveTintColor: "#007ffe",
+                    tabBarLabelStyle: {
+                        "paddingBottom": 0,
+                        "fontSize": 10
+                    },
+                    tabBarStyle: [
+                        {
+                          "display": "flex"
+                        },
+                        null
+                    ]
                 })}
-                tabBarOptions={{
-                    activeTintColor: '#007ffe',
-                    inactivetintColor: 'grey',
-                    labelStyle: { paddingBottom: 0, fontSize: 10 },
-                    style: {padding: 10, height: 70}
-                }}
-                >
-
-                <Tab.Screen name={cameraName} component={CameraScreen}/>
-                <Tab.Screen name={profileName} component={ProfileScreen}/>
-
-
+            >
+            <Tab.Screen name={cameraName} component={CameraScreen}/>
+            <Tab.Screen name={profileName} component={ProfileScreen}/>
             </Tab.Navigator>
         </NavigationContainer>
     )
